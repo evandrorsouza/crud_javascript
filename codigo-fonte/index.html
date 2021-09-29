@@ -35,7 +35,7 @@
       </table>
     </div>     
 
-    
+    <!-- modal deletar -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -54,6 +54,7 @@
       </div>
     </div>
     
+    <!-- modal editar -->
     <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -74,97 +75,12 @@
       </div>
     </div>
 
-
+    <!-- teste envio de email -->
    <!--  <form id="jquery_form">
       <input type="text" name="subject" placeholder="Assunto" /><br>
       <textarea name="text" placeholder="Mensagem" ></textarea><br>
-      <input type="submit" name="send" value="Enviar" /> 
-      
-      
+      <input type="submit" name="send" value="Enviar" />       
     </form> -->
-
-
-    <form id="jquery_form" class="needs-validation" novalidate>
-      <div class="form-row">
-        <div class="col-md-6 mb-3 title-field">
-          <label for="contatoNomeComercial">Nome:</label>
-          <input type="text" class="form-control" id="contatoNomeComercial" placeholder="Digite aqui seu nome" value="" required>
-          <div class="invalid-feedback">
-            Campo Obrigatório
-          </div>
-        </div>
-        <div class="col-md-6 mb-3">
-          <label for="contatoEmailComercial" class="title-field">E-mail:</label>
-          <input type="email" class="form-control" id="contatoEmailComercial" placeholder="Digite aqui seu email" value="" required>
-          <div class="invalid-feedback">
-            Campo Obrigatório
-          </div>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="col-md-6 mb-3">
-          <label for="contatoFoneComercial" class="title-field">Telefone:</label>
-          <input type="number" class="form-control" id="contatoFoneComercial" placeholder="Digite aqui seu telefone" required>
-          <div class="invalid-feedback">
-            Campo Obrigatório
-          </div>
-        </div>
-        <div class="col-md-6 mb-3">
-          <label for="contatoEmpresaComercial" class="title-field">Empresa:</label>
-          <input type="text" class="form-control" id="contatoEmpresaComercial" placeholder="Digite aqui o nome da sua empresa" required>
-          <div class="invalid-feedback">
-            Campo Obrigatório
-          </div>
-        </div>
-      </div>
-
-      <div class="form-group title-field">
-        Área de Atendimento:<select
-          class="form-control"
-          id="contatoInteresseSuporte"
-          required="required"
-        >
-          <option class="hidden" value="">
-            Escolha uma opção:
-          </option>
-          <option value="blueEz">BlueEz</option>
-          <option value="fabrica">Fábrica de Software</option>
-          <option value="nuvem">Nuvem</option>
-          <option value="consultoria">Consultoria</option>
-          <option value="terceirizacao">Terceirização</option>
-          <option value="outro">Outros</option>
-        </select>
-      </div>
-      <div class="invalid-feedback">
-        Campo Obrigatório
-      </div>
-      <div class="col-md-12 px-0">
-        <div class="form-row title-field">
-          Descrição:<br /><textarea
-            class="form-control"
-            id="contatoAssuntoComercial"
-            style="height: 100px !important"
-            required
-          ></textarea>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="checkTermos" required>
-          <label class="form-check-label title-field" for="checkTermos">
-            Estou ciente do uso e tratamento dos meus dados pessoais de acordo com o 
-            <a href="" data-toggle="modal" data-target="#exampleModalLong"
-            >Termo de Consentimento para Tratamento de Dados</a
-          >
-          </label>
-          <div class="invalid-feedback">
-            Campo Obrigatório
-          </div>
-        </div>
-      </div>
-      <button name="send" class="btn btn-success" id="contatoBotaoSolicitarComercial">Enviar Mensagem</button>
-    </form>
-
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

@@ -1,8 +1,8 @@
-$('body').css("background-color", "gray");
+$('body').css("background-color", "gray"); //testando o funcionamento do Jquery
 	
-var meuArray = []
+var meuArray = [] //declarando array vazio
 
-$("#botao").on("click", function (e) {
+$("#botao").on("click", function (e) { //função botão criar
 
 	let id = $('#id').val();
 	let nome = $('#nome').val();
@@ -86,7 +86,7 @@ $("#botao").on("click", function (e) {
 
 });
 
-$("#botao2").on("click", function (e) {
+$("#botao2").on("click", function (e) { //função botão deletar
 
 	let id = $('#idmd').val();	
 
@@ -108,7 +108,7 @@ $("#botao2").on("click", function (e) {
 
 });
 
-$("#botao3").on("click", function (e) {
+$("#botao3").on("click", function (e) { //função botão editar
 
 	let id = $('#idm').val();
 	let nome = $('#nomem').val();
@@ -132,7 +132,7 @@ $("#botao3").on("click", function (e) {
 
 });
 
-function mostrarNaTabela(){	
+function mostrarNaTabela(){	 //função atualizar tabela com os novos valores
 
 	$('#tbody').html(``);
 
@@ -153,24 +153,17 @@ function mostrarNaTabela(){
 
 }
 
+//modais
 var myModal = document.getElementById('exampleModal')
-
-
-myModal.addEventListener('shown.bs.modal', function () {
-  
-})
+myModal.addEventListener('shown.bs.modal', function () {})
 
 var myModal2 = document.getElementById('exampleModal2')
-
-
-myModal2.addEventListener('shown.bs.modal2', function () {
-  
-})
+myModal2.addEventListener('shown.bs.modal2', function () {})
 
 const getLocalStorage = () => JSON.parse(localStorage.getItem('db_client')) ?? []
 const setLocalStorage = (dbClient) => localStorage.setItem("db_client", JSON.stringify(dbClient))
 
-// CRUD - create read update delete
+// CRUD - create read update delete (codigo para salvar em LocalStorage, ainda em desenvolvimento)
 const deleteClient = (index) => {
     const dbClient = readClient()
     dbClient.splice(index, 1)
@@ -201,52 +194,49 @@ const createClient = (client) => {
 //TESTE ENVIO DE EMAIL
 
 
-var form_id = "jquery_form";
+// var form_id = "jquery_form";
+// function onSuccess() {
+// 	// remove this to avoid redirect
+// 	window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+// }
 
+// function onError(error) {
+// 	// remove this to avoid redirect
+// 	window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+// }
 
+// var sendButton = $("#" + form_id + " [name='send']");
 
-function onSuccess() {
-	// remove this to avoid redirect
-	window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
-}
+// function send() {
+// 	sendButton.text('Enviando...');
+// 	sendButton.prop('disabled',true);
 
-function onError(error) {
-	// remove this to avoid redirect
-	window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
-}
+// 	var subject = "Contato atraves do site Monditech"; /* $("#" + form_id + " [name='subject']").val(); */
+// 	var message = "Nome: " + $("#" + form_id + " [id='contatoNomeComercial']").val();
+// 	message += "\n";
+// 	message += "Email: " +  $("#" + form_id + " [id='contatoEmailComercial']").val();
+// 	message += "\n";
+// 	message += "Fone: " +  $("#" + form_id + " [id='contatoFoneComercial']").val();
+// 	message += "\n";
+// 	message += "Empresa: " +  $("#" + form_id + " [id='contatoEmpresaComercial']").val();
+// 	message += "\n";
+// 	message += "Interesse: " +  $("#" + form_id + " [id='contatoInteresseSuporte']").val();
+// 	message += "\n";
+// 	message += "Descrição: " +  $("#" + form_id + " [id='contatoAssuntoComercial']").val();
+// 	data['subject'] = subject;
+// 	data['text'] = message;
 
-var sendButton = $("#" + form_id + " [name='send']");
+// 	$.post('https://postmail.invotes.com/send',
+// 		data,
+// 		onSuccess
+// 	).fail(onError);
 
-function send() {
-	sendButton.text('Enviando...');
-	sendButton.prop('disabled',true);
+// 	return false;
+// }
 
-	var subject = "Contato atraves do site Monditech"; /* $("#" + form_id + " [name='subject']").val(); */
-	var message = "Nome: " + $("#" + form_id + " [id='contatoNomeComercial']").val();
-	message += "\n";
-	message += "Email: " +  $("#" + form_id + " [id='contatoEmailComercial']").val();
-	message += "\n";
-	message += "Fone: " +  $("#" + form_id + " [id='contatoFoneComercial']").val();
-	message += "\n";
-	message += "Empresa: " +  $("#" + form_id + " [id='contatoEmpresaComercial']").val();
-	message += "\n";
-	message += "Interesse: " +  $("#" + form_id + " [id='contatoInteresseSuporte']").val();
-	message += "\n";
-	message += "Descrição: " +  $("#" + form_id + " [id='contatoAssuntoComercial']").val();
-	data['subject'] = subject;
-	data['text'] = message;
+// sendButton.on('click', send);
 
-	$.post('https://postmail.invotes.com/send',
-		data,
-		onSuccess
-	).fail(onError);
-
-	return false;
-}
-
-sendButton.on('click', send);
-
-var $form = $("#" + form_id);
-$form.submit(function( event ) {
-	event.preventDefault();
-});
+// var $form = $("#" + form_id);
+// $form.submit(function( event ) {
+// 	event.preventDefault();
+// });
